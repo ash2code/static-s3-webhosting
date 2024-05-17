@@ -36,7 +36,7 @@ pipeline {
         stage('trraform-destroy') {
             steps {
                 script {
-                    if (env.TERRAFORM_DESTROY = 'ye') {
+                    if (env.TERRAFORM_DESTROY == 'yes') {
                         sh "terraform destroy --auto-approve"
                     }
                     else
