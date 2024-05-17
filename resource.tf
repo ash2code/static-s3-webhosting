@@ -24,14 +24,12 @@ resource "aws_s3_object" "s3-copy-index" {
     bucket = aws_s3_bucket.s3-bucket.id
     key = "index.html"
     source = "index.html"
-    etag = filemd5("/home/ubuntu/static-s3-webhosting/index.html")
 }
 
 resource "aws_s3_object" "s3-copy-error" {
     bucket = aws_s3_bucket.s3-bucket.id
     key = "error.html"
     source = "error.html"
-    etag = filemd5("/home/ubuntu/static-s3-webhosting/error.html")
 } 
 
 resource "aws_s3_bucket_website_configuration" "s3-bucket-website" {
