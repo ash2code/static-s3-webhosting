@@ -54,7 +54,7 @@ resource "aws_s3_bucket_policy" "s3-bucket-policy" {
                     "s3:GetObject",
                     "s3.PutObject",
                 ],
-                Resource = "arn::aws:s3:::${aws_s3_bucket.s3_bucket.id}/*",
+                Resource = "arn::aws:s3:::${aws_s3_bucket.s3-bucket.id}/*",
             },
         ],
     })
