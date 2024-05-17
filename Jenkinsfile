@@ -41,7 +41,7 @@ pipeline {
                     }
                     else
                     {
-                        echo "skipping terraform destroy"
+                        echo "skipping terraform destroy as terraform destroy set to no"
                     }
                 }
             }
