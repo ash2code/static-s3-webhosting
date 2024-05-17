@@ -12,6 +12,14 @@ resource "aws_s3_bucket_versioning" "s3-bucket-versioning" {
     }
 }
 
+resource "aws_s3_bucket_ownersip_controls" "s3-bucket-owner-cls" {
+    bucket = aws_s3_bucket.s3-bucket.id
+
+    rule {
+        object_ownership = "BucketOwnerPreferred"
+    }
+}
+
 resource "aws_s3_bucket_public_access_block" "s3-bucket-pub-access" {
     bucket = aws_s3_bucket.s3-bucket.id
     block_public_acls       = false
@@ -60,6 +68,7 @@ resource "aws_s3_bucket_policy" "s3-bucket-policy" {
     })
 }
 
-        
+
+
 
 
