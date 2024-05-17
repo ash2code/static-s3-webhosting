@@ -1,0 +1,1 @@
+bucket_name = "static-s3-ash-website"
